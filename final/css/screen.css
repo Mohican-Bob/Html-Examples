@@ -1,0 +1,199 @@
+/* colors:
+#3CB14A green
+#F68A33 orange
+#EE2842 red
+#0033 blue background
+#52B9E9 light blue */
+
+*{
+    box-sizing: border-box;
+}
+.row::after{
+    content:"";
+    clear:both;
+    display:table;
+}
+/* navigation css */
+.hamburg {   
+    float: right;
+    margin: 45px 25px;
+    font-size:70px;
+    cursor:pointer;
+    background: none;
+    color: #F68A33;
+}
+.sidenav { 
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1;
+    top: 0; 
+    right: 0; 
+    background-color: #F68A33; 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    padding-top: 60px; 
+    } 
+    
+.sidenav a { 
+    padding: 8px 8px 8px 32px; 
+    text-decoration: none; 
+    font-size: 35px; 
+    color: rgb(0,0,33); 
+    display: block; 
+    transition: 0.3s; 
+        } 
+        
+.sidenav a:hover { 
+    color: #52B9E9; 
+} 
+            
+.sidenav .closebtn { 
+    position: absolute; 
+    top: 0; 
+    right: 25px; 
+    font-size: 36px; 
+    margin-left: 50px; 
+} 
+                
+#main { 
+    transition: margin-left .5s; 
+        padding: 16px; 
+} 
+                    
+@media screen and (max-height: 450px) { 
+    .sidenav {padding-top: 15px;} /* decreases padding-top for mobile */ 
+    .sidenav a {font-size: 18px;} /* decreases link font-size for mobile */ 
+} 
+/* end navigation css */
+body {
+	font-family: condor, sans-serif;
+	font-size:1.5em;
+    background:rgb(0,0,33);
+    margin:0px;
+    padding:0px;
+    width: 100%;
+}
+.logo {
+    float: left;
+    margin: 20px 0px 0px 20px;
+    background: none;
+}
+._text{
+    margin:auto;
+    color: white;
+    margin:auto;
+    
+}
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.iframe-container iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+}
+header{
+	width:100%;
+    color:lightskyblue;
+	display: inline-block;
+    background-image: url("../media/background.jpg");
+    max-height: 241px;
+}
+section{
+    margin:auto;
+    width: 100%;
+    background:none;
+    color: white;
+}
+article{
+    
+    border-right: 10px solid #52B9E9;
+    border-left: 10px solid #52B9E9;
+    
+}
+summary{
+	color:#339966;
+	text-shadow:1px 1px rgb(black);
+	font-size:1.1em;
+}
+aside {
+    background: none;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    opacity:.8;
+}
+footer a:hover{
+    color: #52B9E9;
+    transition: .5s;
+}
+/* For mobile */
+[class*="col-"]{
+    width:100%; /*this is being overidden in tablet and desktop */
+    margin: auto; /*sets defaults for everything including tablet and desktop */
+    padding:25px; /* sets the default for everything including tablet and desktop */
+}
+@media only screen and (min-width:600px){
+    /*code for tablets*/
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+    body{
+        background:url('../media/background-small.jpg');
+        max-width:100%;
+        background-repeat:no-repeat;
+        background-position:center top;
+        background-size:cover;
+        background-color:rgb(0,0,33);
+        margin: auto;        
+    }
+}
+@media only screen and (min-width:768px)
+{
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    body
+    {
+        max-width:100%;
+        background:url('../media/background-large.jpg');
+        background-repeat:no-repeat;
+        background-position:center top;
+        background-size:cover;
+        background-color:rgb(0, 0, 33);
+        margin:auto;
+    }
+}
